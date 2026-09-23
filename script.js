@@ -144,3 +144,36 @@ const translations = {
     a.addEventListener("click", () => nav.classList.remove("open"));
   });
 })();
+
+// ---------- ScrollSpy (отслеживание активной секции при прокрутке) ----------
+(function initScrollSpy() {
+  const sections = document.querySelectorAll("section[id]");
+  const navLinks = document.querySelectorAll(".navlinks a[href^='#']");
+
+  if (!sections.length || !navLinks.length) return;
+
+  function onScroll() {
+    const scrollPos = window.scrollY || document.documentElement.scrollTop;
+    // Отступ с учетом высоты липкого хедера
+    const offset = 120; 
+
+    sections.forEach(section => {
+      const top = section.offsetTop - offset;
+      const height = section.offsetHeight;
+      const id = section.getAttribute("id");
+
+      if (scrollPos >= top && scrollPos < top + height) {
+        navLinks.forEach(link => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === `#${id}`) {
+            link.classList.add("active");
+          }
+        });
+      }
+    });
+  }
+
+  window.addEventListener("scroll", onScroll);
+  // Вызываем при загрузке страницы, чтобы сразу подсветить текущую секцию
+  onScroll();
+})();

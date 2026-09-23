@@ -220,3 +220,34 @@ footer ul li a:hover{text-decoration:underline;}
   --ink:#EAF3E6; --ink-soft:#A9C2B3; --primary:#4FA57C; --primary-dark:#245C42;
   --line:#2A3C31;
 }
+
+/* Навигационные ссылки */
+.navlinks a {
+  position: relative;
+  text-decoration: none;
+  padding-bottom: 6px; /* Зазор под текстом для полоски */
+  transition: color 0.3s ease;
+}
+
+/* Полоска под активным пунктом */
+.navlinks a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 3px;
+  background-color: var(--amber, #F0A93A); /* Цвет подчеркивания */
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+/* При активации (ScrollSpy или клике) ширина полоски становится 100% */
+.navlinks a.active::after {
+  width: 100%;
+}
+
+/* По желанию: появление полоски при наведении курсора */
+.navlinks a:hover::after {
+  width: 100%;
+}

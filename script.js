@@ -1,27 +1,24 @@
 // ============================================================
-// «Ақзере» balabaqsha — i18n (KK default / RU) + mobile menu
+// «Ақзере» balabaqsha — i18n (KK / RU) + Mobile Menu
 // ============================================================
 
 const translations = {
-  kk: {
-    // values are already in the HTML as the default (Kazakh) text,
-    // so this object stays empty — switching to "kk" just restores
-    // the original textContent/innerHTML that was saved on load.
-  },
+  kk: {},
   ru: {
     "topbar.hours": "Пн–Пт: 08:00–18:00",
     "topbar.city": "г. Алматы, Наурызбайский район",
 
-    "brand.tagline": "частный детский сад · Алматы",
+    "brand.tagline": "частный детский сад",
 
     "nav.about": "О нас",
     "nav.advantages": "Преимущества",
     "nav.gallery": "Галерея",
+    "nav.documents": "Документы",
     "nav.contact": "Контакты",
 
     "hero.eyebrow": "🌱 Частный детский сад в Наурызбайском районе",
     "hero.title": "Первые шаги вашего ребёнка —<br><span class=\"accent\">в надёжных и заботливых руках</span>",
-    "hero.lead": "Детский сад «Ақзере» — тёплая семейная атмосфера, забота о здоровье и раннее развитие для детей от 1 до 6 лет в спокойном районе Алматы.",
+    "hero.lead": "Детский сад «Ақзере» — тёплая семейная атмосфера, забота о здоровье и раннее развитие для детей от 1 до 5 лет в спокойном районе Алматы.",
     "hero.cta1": "Записаться на встречу",
     "hero.cta2": "Узнать больше",
     "hero.stat1": "лет, возраст воспитанников",
@@ -42,7 +39,7 @@ const translations = {
     "about.fact4k": "Рабочие дни",
     "about.fact4v": "Пн–Пт",
     "about.fact5k": "Языки обучения",
-    "about.fact5v": "КАЗ / РУС / ENG",
+    "about.fact5v": "КАЗ / РУС",
 
     "adv.tag": "Наши преимущества",
     "adv.title": "Почему родители выбирают «Ақзере»",
@@ -71,6 +68,27 @@ const translations = {
     "gal.g6t": "Языковое развитие",
     "gal.g6d": "Казахский, русский, английский",
 
+    // Документы
+    "docs.pageTitle": "Документы — Детский сад «Ақзере»",
+    "docs.tag": "Официальная информация",
+    "docs.title": "Документы детского сада",
+    "docs.lead": "В этом разделе вы можете ознакомиться и скачать все официальные документы, лицензии и сертификаты детского сада.",
+    "docs.downloadBtn": "Скачать",
+
+    "doc.rent": "Договор аренды",
+    "doc.gift": "Договор дарения жилого дома расположенного на земельном участке",
+    "doc.buildingPlan": "План строения",
+    "doc.evacPlan": "План эвакуации",
+    "doc.protocol": "Протокол",
+    "doc.sanitary": "Санитарно-эпидемиологическое заключение",
+    "doc.knowledgeCheck": "Сведения о проверке знаний",
+    "doc.certificate": "Сертификат",
+    "doc.propertyRef": "Справка о зарегистрированных правах (обременениях) на недвижимое имущество и его технических характеристиках",
+    "doc.techPass": "Технический паспорт",
+    "doc.techSpecs": "Технические характеристики сооружения",
+    "doc.noticeSat": "Уведомление ТОО Сәт-Береке",
+    "doc.evacSimulator": "Эвакуационный тренажер в случае пожара",
+
     "contact.tag": "Свяжитесь с нами",
     "contact.title": "Будем рады ответить на ваши вопросы",
     "contact.cardTitle": "Контактная информация",
@@ -88,7 +106,6 @@ const translations = {
 };
 
 (function initI18n() {
-  // Snapshot the original (Kazakh) content so we can switch back to it.
   const textNodes = document.querySelectorAll("[data-i18n]");
   const htmlNodes = document.querySelectorAll("[data-i18n-html]");
 
@@ -133,7 +150,7 @@ const translations = {
   });
 })();
 
-// ---------- mobile menu ----------
+// ---------- Mobile menu ----------
 (function initMenu() {
   const burger = document.getElementById("burgerBtn");
   const nav = document.getElementById("navLinks");
@@ -143,4 +160,35 @@ const translations = {
   nav.querySelectorAll("a").forEach(a => {
     a.addEventListener("click", () => nav.classList.remove("open"));
   });
+})();
+
+// ---------- ScrollSpy ----------
+(function initScrollSpy() {
+  const sections = document.querySelectorAll("section[id]");
+  const navLinks = document.querySelectorAll(".navlinks a[href^='#']");
+
+  if (!sections.length || !navLinks.length) return;
+
+  function onScroll() {
+    const scrollPos = window.scrollY || document.documentElement.scrollTop;
+    const offset = 120; 
+
+    sections.forEach(section => {
+      const top = section.offsetTop - offset;
+      const height = section.offsetHeight;
+      const id = section.getAttribute("id");
+
+      if (scrollPos >= top && scrollPos < top + height) {
+        navLinks.forEach(link => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === `#${id}`) {
+            link.classList.add("active");
+          }
+        });
+      }
+    });
+  }
+
+  window.addEventListener("scroll", onScroll);
+  onScroll();
 })();

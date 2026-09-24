@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title data-i18n="docs.pageTitle">Құжаттар — «Ақзере» балабақшасы</title>
+<meta name="description" content="«Ақзере» балабақшасының ресми құжаттары">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .docs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+    margin-top: 32px;
+  }
+  .doc-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 16px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .doc-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(31, 90, 63, 0.08);
+  }
+  .doc-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+  }
+  .doc-badge {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    color: #fff;
+    flex: none;
+    text-transform: uppercase;
+  }
+  .badge-pdf { background: #E97662; }
+  .badge-jpeg { background: #5A9FC4; }
+  .badge-docx { background: #2E7A57; }
+
+  .doc-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin: 0;
+    line-height: 1.4;
+  }
+  .doc-download {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 10px 16px;
+    border-radius: 999px;
+    background: var(--surface-tint);
+    color: var(--primary-dark);
+    font-size: 14px;
+    font-weight: 700;
+    border: 1px solid var(--line);
+    text-decoration: none;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+  .doc-download:hover {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <nav class="main">
+    <a href="index.html" class="brand-row">
+      <svg class="emblem" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="24" cy="24" r="23" fill="var(--surface)" stroke="var(--primary)" stroke-width="2"/>
+        <path d="M24 12c2 3 6 4 6 9 0 4-3 7-6 7s-6-3-6-7c0-5 4-6 6-9Z" fill="var(--primary)"/>
+        <circle cx="16" cy="30" r="4" fill="var(--amber)"/>
+        <circle cx="32" cy="30" r="4" fill="var(--coral)"/>
+      </svg>
+      <span class="name brand">Ақзере<small data-i18n="brand.tagline">жеке балабақша</small></span>
+    </a>
+
+    <div class="nav-right">
+      <div class="lang-switch" role="group" aria-label="Тіл / Язык">
+        <button type="button" class="lang-btn" data-lang="kk">ҚАЗ</button>
+        <button type="button" class="lang-btn" data-lang="ru">РУС</button>
+      </div>
+      <button class="burger" id="burgerBtn" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="navlinks" id="navLinks">
+      <a href="index.html#about" data-i18n="nav.about">Біз туралы</a>
+      <a href="index.html#advantages" data-i18n="nav.advantages">Артықшылықтарымыз</a>
+      <a href="documents.html" class="active" data-i18n="nav.documents">Құжаттар</a>
+      <a href="index.html#contact" class="cta" data-i18n="nav.contact">Байланыс</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="tag" data-i18n="docs.tag">Ресми ақпарат</span>
+        <h2 data-i18n="docs.title">Балабақша құжаттары</h2>
+        <p data-i18n="docs.lead">Осы бөлімде балабақшаның барлық ресми құжаттары, лицензиялары мен сертификаттарымен танысып, жүктеп ала аласыз.</p>
+      </div>
+
+      <div class="docs-grid">
+
+        <!-- 1. Договор аренды -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-jpeg">JPEG</div>
+            <h3 class="doc-title" data-i18n="doc.rent">Договор аренды</h3>
+          </div>
+          <a href="documents/Договор аренды.jpeg" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 2. Договор дарения -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-jpeg">JPEG</div>
+            <h3 class="doc-title" data-i18n="doc.gift">Договор дарения жилого дома расположенного на земельном участке</h3>
+          </div>
+          <a href="documents/Договор дарения жилого дома расположенного на земельном участке.jpeg" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 3. План строени -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-pdf">PDF</div>
+            <h3 class="doc-title" data-i18n="doc.buildingPlan">План строени</h3>
+          </div>
+          <a href="documents/План строени.pdf" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 4. План эвакуации -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-pdf">PDF</div>
+            <h3 class="doc-title" data-i18n="doc.evacPlan">План эвакуации</h3>
+          </div>
+          <a href="documents/План эвакуации.pdf" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 5. Протокол -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-jpeg">JPEG</div>
+            <h3 class="doc-title" data-i18n="doc.protocol">Протокол</h3>
+          </div>
+          <a href="documents/Протокол.jpeg" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 6. Санитарно-эпидемиологическое заключение -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-pdf">PDF</div>
+            <h3 class="doc-title" data-i18n="doc.sanitary">Санитарно-эпидемиологическое заключение</h3>
+          </div>
+          <a href="documents/Санитарно-эпидемиологическое заключение.pdf" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 7. Сведения о проверке знаний -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-jpeg">JPEG</div>
+            <h3 class="doc-title" data-i18n="doc.knowledgeCheck">Сведения о проверке знаний</h3>
+          </div>
+          <a href="documents/Сведения о проверке зананий.jpeg" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 8. Сертификат -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-jpeg">JPEG</div>
+            <h3 class="doc-title" data-i18n="doc.certificate">Сертификат</h3>
+          </div>
+          <a href="documents/Сертификат.jpeg" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 9. Справка о зарегистрированных правах -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-pdf">PDF</div>
+            <h3 class="doc-title" data-i18n="doc.propertyRef">Справка о зарегистрированных правах (обременениях) на недвижимое имущество и его технических характеристиках</h3>
+          </div>
+          <a href="documents/Справка о зарегистрированных правах (обременениях) на недвижимое имущество и его технических характеристиках.pdf" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 10. Технический паспорт -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-jpeg">JPEG</div>
+            <h3 class="doc-title" data-i18n="doc.techPass">Технический паспорт</h3>
+          </div>
+          <a href="documents/Технически паспорт.jpeg" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 11. Технические характеристики сооружения -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-jpeg">JPEG</div>
+            <h3 class="doc-title" data-i18n="doc.techSpecs">Технические характеристики сооружения</h3>
+          </div>
+          <a href="documents/Технические характеристики сооружения.jpeg" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 12. Уведомление ТОО Сәт-Береке -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-pdf">PDF</div>
+            <h3 class="doc-title" data-i18n="doc.noticeSat">Уведомление ТОО Сәт-Береке</h3>
+          </div>
+          <a href="documents/Уведомление ТОО Сәт-Береке.pdf" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 13. Эвакуационный тренажер -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-docx">DOCX</div>
+            <h3 class="doc-title" data-i18n="doc.evacSimulator">Эвакуационный тренажер в случае пожара</h3>
+          </div>
+          <a href="documents/Эвакуационный тренажер в случае пожара .docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>Ақзере</h4>
+        <p data-i18n="footer.about">Алматы қаласы, Наурызбай ауданы, Жуалы көшесі 79 мекенжайындағы жеке балабақша. Күн сайынғы қамқорлық, қауіпсіздік және даму.</p>
+        
+        <!-- Социальные сети со ссылками на ПРОФИЛИ -->
+        <div class="social-links">
+          <!-- Ссылка на страницу Instagram -->
+          <a href="https://www.instagram.com/akzere_balabaqsha" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+          </a>
+
+          <!-- Ссылка на страницу TikTok -->
+          <a href="https://www.tiktok.com/@user7842803865869" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="TikTok">
+            <svg viewBox="0 0 24 24">
+              <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.82.56-1.36 1.49-1.41 2.49-.1 1.39.73 2.72 2.02 3.17 1.23.45 2.68.12 3.58-.8.64-.66.97-1.57.97-2.49.02-4.14.01-8.28.01-12.42z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h4 data-i18n="footer.sections">Бөлімдер</h4>
+        <ul>
+          <li><a href="index.html#about" data-i18n="nav.about">Біз туралы</a></li>
+          <li><a href="index.html#advantages" data-i18n="nav.advantages">Артықшылықтарымыз</a></li>
+          <li><a href="documents.html" data-i18n="nav.documents">Құжаттар</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 data-i18n="footer.contacts">Байланыс</h4>
+        <ul>
+          <li data-i18n="topbar.city">г. Алматы, Наурызбайский р/н, ул. Жуалы 79</li>
+          <li><a href="tel:+77083778969">+7 708 377 89 69</a></li>
+          <li><a href="mailto:info@akzere.edu.kz">info@akzere.edu.kz</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="foot-bottom">
+      <span data-i18n="footer.copy">© 2026 «Ақзере» балабақшасы. Барлық құқықтар қорғалған.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

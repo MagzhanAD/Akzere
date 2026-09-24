@@ -47,6 +47,7 @@ ul{margin:0; padding:0; list-style:none;}
 .topbar a{opacity:.92;}
 .topbar a:hover{opacity:1; text-decoration:underline;}
 .topbar .tb-group{display:flex; gap:18px; flex-wrap:wrap;}
+.topbar {display: none !important;}
 
 /* ---------- Header / nav ---------- */
 header.site{
@@ -250,4 +251,33 @@ footer ul li a:hover{text-decoration:underline;}
 /* По желанию: появление полоски при наведении курсора */
 .navlinks a:hover::after {
   width: 100%;
+}
+
+.social-links {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--surface-tint, #f0f7f4);
+  color: var(--primary-dark, #1f5a3f);
+  border: 1px solid var(--line, #e0e0e0);
+  transition: all 0.2s ease;
+}
+.social-btn:hover {
+  background: var(--primary, #2e7a57);
+  color: #ffffff;
+  border-color: var(--primary, #2e7a57);
+  transform: translateY(-2px);
+}
+.social-btn svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
 }

@@ -9,6 +9,22 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<style>
+/* ===== PHOTO GALLERY ===== */
+.photo-gallery{columns:3 280px;column-gap:16px}
+.photo-gallery .ph{position:relative;display:block;width:100%;margin:0 0 16px;padding:0;border:0;background:#fff;border-radius:18px;overflow:hidden;cursor:zoom-in;break-inside:avoid;box-shadow:0 6px 20px rgba(40,60,50,.10);transition:transform .25s ease,box-shadow .25s ease}
+.photo-gallery .ph img{display:block;width:100%;height:auto;transition:transform .4s ease}
+.photo-gallery .ph:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(40,60,50,.18)}
+.photo-gallery .ph:hover img{transform:scale(1.04)}
+.photo-gallery .ph:focus-visible{outline:3px solid #F0A93A;outline-offset:2px}
+@media (max-width:640px){.photo-gallery{columns:2 140px;column-gap:10px}.photo-gallery .ph{margin-bottom:10px;border-radius:14px}}
+.lb{position:fixed;inset:0;z-index:1000;display:none;align-items:center;justify-content:center;background:rgba(20,30,25,.9);padding:20px}
+.lb.open{display:flex}
+.lb img{max-width:100%;max-height:100%;border-radius:12px;box-shadow:0 10px 40px rgba(0,0,0,.5)}
+.lb button{position:absolute;border:0;background:rgba(255,255,255,.16);color:#fff;width:46px;height:46px;border-radius:50%;font-size:26px;line-height:1;cursor:pointer}
+.lb button:hover{background:rgba(255,255,255,.3)}
+.lb .x{top:16px;right:16px}.lb .p{left:14px;top:50%;transform:translateY(-50%)}.lb .n{right:14px;top:50%;transform:translateY(-50%)}
+</style>
 </head>
 <body>
 
@@ -21,7 +37,7 @@
         <circle cx="16" cy="30" r="4" fill="var(--amber)"/>
         <circle cx="32" cy="30" r="4" fill="var(--coral)"/>
       </svg>
-      <span class="name brand">Ақзере<small data-i18n="brand.tagline">жеке балабақша · Алматы қаласы</small></span>
+      <span class="name brand">Ақзере<small data-i18n="brand.tagline">жеке балабақша</small></span>
     </a>
 
     <div class="nav-right">
@@ -36,7 +52,7 @@
 
     <div class="navlinks" id="navLinks">
       <a href="#about" data-i18n="nav.about">Біз туралы</a>
-      <a href="#advantages" data-i18n="nav.advantages">Артықшылықтарымыз</a>
+      <a href="#photos" data-i18n="nav.gallery">Галерея</a>
       <a href="documents.html" data-i18n="nav.documents">Құжаттар</a>
       <a href="#contact" class="cta" data-i18n="nav.contact">Байланыс</a>
     </div>
@@ -111,8 +127,36 @@
     </div>
   </section>
 
+  <!-- ===== PHOTO GALLERY ===== -->
+  <section id="photos">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="tag" data-i18n="photos.tag">Галерея</span>
+        <h2 data-i18n="photos.title">Біздің балабақшадағы күндер</h2>
+        <p data-i18n="photos.lead">Топтарымыз, ойын аймақтары, тамақтану және балалардың күнделікті өмірінен фотосуреттер.</p>
+      </div>
+      <div class="photo-gallery">
+        <button type="button" class="ph" data-full="images/gallery/1.jpg" aria-label="Фото 1"><img src="images/gallery/1.jpg" alt="«Ақзере» балабақшасы — фото 1" loading="lazy"></button>
+        <button type="button" class="ph" data-full="images/gallery/2.jpg" aria-label="Фото 2"><img src="images/gallery/2.jpg" alt="«Ақзере» балабақшасы — фото 2" loading="lazy"></button>
+        <button type="button" class="ph" data-full="images/gallery/3.jpg" aria-label="Фото 3"><img src="images/gallery/3.jpg" alt="«Ақзере» балабақшасы — фото 3" loading="lazy"></button>
+        <button type="button" class="ph" data-full="images/gallery/4.jpg" aria-label="Фото 4"><img src="images/gallery/4.jpg" alt="«Ақзере» балабақшасы — фото 4" loading="lazy"></button>
+        <button type="button" class="ph" data-full="images/gallery/5.jpg" aria-label="Фото 5"><img src="images/gallery/5.jpg" alt="«Ақзере» балабақшасы — фото 5" loading="lazy"></button>
+        <button type="button" class="ph" data-full="images/gallery/6.jpg" aria-label="Фото 6"><img src="images/gallery/6.jpg" alt="«Ақзере» балабақшасы — фото 6" loading="lazy"></button>
+        <button type="button" class="ph" data-full="images/gallery/7.jpg" aria-label="Фото 7"><img src="images/gallery/7.jpg" alt="«Ақзере» балабақшасы — фото 7" loading="lazy"></button>
+        <button type="button" class="ph" data-full="images/gallery/8.jpg" aria-label="Фото 8"><img src="images/gallery/8.jpg" alt="«Ақзере» балабақшасы — фото 8" loading="lazy"></button>
+      </div>
+    </div>
+  </section>
+
+  <div class="lb" id="lb" aria-hidden="true">
+    <button type="button" class="x" aria-label="Жабу">&times;</button>
+    <button type="button" class="p" aria-label="Алдыңғы">&#8249;</button>
+    <img alt="">
+    <button type="button" class="n" aria-label="Келесі">&#8250;</button>
+  </div>
+
   <!-- ===== ADVANTAGES ===== -->
-  <section id="advantages">
+  <section id="advantages" class="alt">
     <div class="wrap">
       <div class="section-head">
         <span class="tag" data-i18n="adv.tag">Артықшылықтарымыз</span>
@@ -152,7 +196,7 @@
   </section>
 
   <!-- ===== GALLERY ===== -->
-  <section id="gallery" class="alt">
+  <section id="gallery">
     <div class="wrap">
       <div class="section-head">
         <span class="tag" data-i18n="gal.tag">Балабақша өмірі</span>
@@ -260,7 +304,7 @@
         <h4 data-i18n="footer.sections">Бөлімдер</h4>
         <ul>
           <li><a href="index.html#about" data-i18n="nav.about">Біз туралы</a></li>
-          <li><a href="index.html#advantages" data-i18n="nav.advantages">Артықшылықтарымыз</a></li>
+          <li><a href="index.html#photos" data-i18n="nav.gallery">Галерея</a></li>
           <li><a href="documents.html" data-i18n="nav.documents">Құжаттар</a></li>
         </ul>
       </div>
@@ -282,5 +326,25 @@
 </footer>
 
 <script src="script.js"></script>
+<script>
+(function(){
+  var lb=document.getElementById('lb'),img=lb.querySelector('img');
+  var items=[].slice.call(document.querySelectorAll('.photo-gallery .ph')),cur=0;
+  function show(i){cur=(i+items.length)%items.length;img.src=items[cur].dataset.full;}
+  function open(i){show(i);lb.classList.add('open');document.body.style.overflow='hidden';}
+  function close(){lb.classList.remove('open');document.body.style.overflow='';}
+  items.forEach(function(b,i){b.addEventListener('click',function(){open(i)})});
+  lb.querySelector('.x').onclick=close;
+  lb.querySelector('.p').onclick=function(e){e.stopPropagation();show(cur-1)};
+  lb.querySelector('.n').onclick=function(e){e.stopPropagation();show(cur+1)};
+  lb.addEventListener('click',function(e){if(e.target===lb||e.target===img)close()});
+  document.addEventListener('keydown',function(e){
+    if(!lb.classList.contains('open'))return;
+    if(e.key==='Escape')close();
+    if(e.key==='ArrowLeft')show(cur-1);
+    if(e.key==='ArrowRight')show(cur+1);
+  });
+})();
+</script>
 </body>
 </html>

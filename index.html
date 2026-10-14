@@ -3,28 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>«Ақзере» балабақшасы</title>
+<title>«Ақзере 2» балабақшасы</title>
 <meta name="description" content="«Ақзере» — Алматы қаласындағы жеке балабақша">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<style>
-/* ===== PHOTO GALLERY ===== */
-.photo-gallery{columns:3 280px;column-gap:16px}
-.photo-gallery .ph{position:relative;display:block;width:100%;margin:0 0 16px;padding:0;border:0;background:#fff;border-radius:18px;overflow:hidden;cursor:zoom-in;break-inside:avoid;box-shadow:0 6px 20px rgba(40,60,50,.10);transition:transform .25s ease,box-shadow .25s ease}
-.photo-gallery .ph img{display:block;width:100%;height:auto;transition:transform .4s ease}
-.photo-gallery .ph:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(40,60,50,.18)}
-.photo-gallery .ph:hover img{transform:scale(1.04)}
-.photo-gallery .ph:focus-visible{outline:3px solid #F0A93A;outline-offset:2px}
-@media (max-width:640px){.photo-gallery{columns:2 140px;column-gap:10px}.photo-gallery .ph{margin-bottom:10px;border-radius:14px}}
-.lb{position:fixed;inset:0;z-index:1000;display:none;align-items:center;justify-content:center;background:rgba(20,30,25,.9);padding:20px}
-.lb.open{display:flex}
-.lb img{max-width:100%;max-height:100%;border-radius:12px;box-shadow:0 10px 40px rgba(0,0,0,.5)}
-.lb button{position:absolute;border:0;background:rgba(255,255,255,.16);color:#fff;width:46px;height:46px;border-radius:50%;font-size:26px;line-height:1;cursor:pointer}
-.lb button:hover{background:rgba(255,255,255,.3)}
-.lb .x{top:16px;right:16px}.lb .p{left:14px;top:50%;transform:translateY(-50%)}.lb .n{right:14px;top:50%;transform:translateY(-50%)}
-</style>
 </head>
 <body>
 
@@ -33,11 +17,12 @@
     <a href="#top" class="brand-row">
       <svg class="emblem" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="24" cy="24" r="23" fill="var(--surface)" stroke="var(--primary)" stroke-width="2"/>
-        <path d="M24 12c2 3 6 4 6 9 0 4-3 7-6 7s-6-3-6-7c0-5 4-6 6-9Z" fill="var(--primary)"/>
-        <circle cx="16" cy="30" r="4" fill="var(--amber)"/>
-        <circle cx="32" cy="30" r="4" fill="var(--coral)"/>
+        <path d="M27 13a11 11 0 1 0 8 15.8A9 9 0 0 1 27 13Z" fill="var(--primary)"/>
+        <circle cx="16" cy="16" r="2" fill="var(--gold)"/>
+        <circle cx="34" cy="20" r="1.6" fill="var(--pink)"/>
+        <circle cx="14" cy="30" r="1.6" fill="var(--teal)"/>
       </svg>
-      <span class="name brand">Ақзере<small data-i18n="brand.tagline">жеке балабақша</small></span>
+      <span class="name brand">Ақзере 2<small data-i18n="brand.tagline">жеке балабақша · Алматы қаласы</small></span>
     </a>
 
     <div class="nav-right">
@@ -52,7 +37,7 @@
 
     <div class="navlinks" id="navLinks">
       <a href="#about" data-i18n="nav.about">Біз туралы</a>
-      <a href="#photos" data-i18n="nav.gallery">Галерея</a>
+      <a href="#advantages" data-i18n="nav.advantages">Артықшылықтарымыз</a>
       <a href="documents.html" data-i18n="nav.documents">Құжаттар</a>
       <a href="#contact" class="cta" data-i18n="nav.contact">Байланыс</a>
     </div>
@@ -62,39 +47,48 @@
 <main id="top">
 
   <!-- ===== HERO ===== -->
-  <section class="hero" style="padding-top:56px;">
-    <svg class="hero-blob" width="420" height="420" style="top:-140px; right:-120px;">
-      <circle cx="210" cy="210" r="210" fill="#F0A93A" opacity="0.18"/>
-    </svg>
-    <svg class="hero-blob" width="320" height="320" style="bottom:-120px; left:-100px;">
-      <circle cx="160" cy="160" r="160" fill="#5A9FC4" opacity="0.15"/>
-    </svg>
-    <div class="wrap">
-      <div>
-        <span class="eyebrow" data-i18n="hero.eyebrow">🌱 Наурызбай ауданындағы жеке балабақша</span>
-        <h1 data-i18n-html="hero.title">Балаңыздың алғашқы қадамдары —<br><span class="accent">сенімді әрі жылы қолдарда</span></h1>
-        <p class="lead" data-i18n="hero.lead">«Ақзере» балабақшасы — 2–5 жас аралығындағы балаларға арналған отбасылық жылу, қауіпсіздік және ерте даму ортасы, Алматы қаласының тыныш ауданында орналасқан.</p>
-        <div class="hero-ctas">
-          <a href="#contact" class="btn btn-primary" data-i18n="hero.cta1">Кездесуге жазылу</a>
-          <a href="#about" class="btn btn-ghost" data-i18n="hero.cta2">Толығырақ білу</a>
+  <section class="hero">
+    <div class="panel">
+      <span class="star" style="width:4px;height:4px;top:14%;left:8%;"></span>
+      <span class="star" style="width:3px;height:3px;top:30%;left:22%;animation-delay:.6s;"></span>
+      <span class="star" style="width:5px;height:5px;top:10%;left:42%;animation-delay:1.1s;"></span>
+      <span class="star" style="width:3px;height:3px;top:60%;left:12%;animation-delay:.3s;"></span>
+      <span class="star" style="width:4px;height:4px;top:75%;left:34%;animation-delay:1.6s;"></span>
+      <span class="star" style="width:3px;height:3px;top:22%;left:60%;animation-delay:.9s;"></span>
+      <span class="star" style="width:4px;height:4px;top:48%;left:52%;animation-delay:2s;"></span>
+      <div class="wrap">
+        <div>
+          <span class="eyebrow" data-i18n="hero.eyebrow">✨ Наурызбай ауданындағы жеке балабақша</span>
+          <h1 data-i18n-html="hero.title">Балаңыздың алғашқы қадамдары —<br>тыныштық пен қуанышқа толы ортада басталсын</h1>
+          <p class="lead" data-i18n="hero.lead">«Ақзере 2» балабақшасы — 2–5 жас аралығындағы балаларға арналған жарқын да жайлы орта, Алматының тыныш Наурызбай ауданында. Күн сайын — жаңа білім, жаңа дос және кішкентай жетістік.</p>
+          <div class="hero-ctas">
+            <a href="#contact" class="btn btn-primary" data-i18n="hero.cta1">Экскурсияға жазылу</a>
+            <a href="#about" class="btn btn-ghost" data-i18n="hero.cta2">Бағдарламамен танысу</a>
+          </div>
+          <div class="stat-strip">
+            <div><b>2–5</b><span data-i18n="hero.stat1">жас, тәрбиеленушілер</span></div>
+            <div><b>5</b><span data-i18n="hero.stat2">жұмыс күні, Дс–Жм</span></div>
+          </div>
         </div>
-      </div>
-      <div class="hero-art">
-        <svg viewBox="0 0 420 380" width="100%" xmlns="http://www.w3.org/2000/svg">
-          <ellipse cx="210" cy="345" rx="170" ry="20" fill="#2E7A57" opacity="0.10"/>
-          <circle cx="330" cy="70" r="34" fill="#F0A93A"/>
-          <path d="M40 300 L40 190 L210 100 L380 190 L380 300 Z" fill="#FFFFFF" stroke="#D9E7D2" stroke-width="2"/>
-          <rect x="70" y="210" width="90" height="90" rx="10" fill="#E4F1E9"/>
-          <rect x="260" y="210" width="90" height="90" rx="10" fill="#FBE4E0"/>
-          <path d="M170 300 L170 240 Q210 210 250 240 L250 300 Z" fill="#5A9FC4"/>
-          <circle cx="210" cy="150" r="14" fill="#E97662"/>
-          <path d="M20 190 L210 90 L400 190" fill="none" stroke="#2E7A57" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-          <circle cx="100" cy="150" r="10" fill="#F0A93A"/>
-          <circle cx="320" cy="150" r="10" fill="#8B6CC7"/>
-          <path d="M60 340 q20 -30 40 0" stroke="#2E7A57" stroke-width="6" fill="none" stroke-linecap="round"/>
-          <path d="M320 340 q20 -30 40 0" stroke="#2E7A57" stroke-width="6" fill="none" stroke-linecap="round"/>
-          <circle cx="210" cy="210" r="16" fill="#F0A93A"/>
-        </svg>
+        <div class="hero-art">
+          <svg viewBox="0 0 420 380" width="100%" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="320" cy="90" r="46" fill="#FFC94A"/>
+            <circle cx="304" cy="76" r="46" fill="#241B3A" opacity="0.001"/>
+            <path d="M320 44a46 46 0 1 0 40 68 36 36 0 0 1-40-68Z" fill="#241B3A" opacity="0.35"/>
+            <circle cx="60" cy="60" r="3" fill="#fff" opacity="0.8"/>
+            <circle cx="100" cy="40" r="2" fill="#fff" opacity="0.6"/>
+            <circle cx="150" cy="70" r="2.5" fill="#fff" opacity="0.7"/>
+            <circle cx="40" cy="140" r="2" fill="#fff" opacity="0.5"/>
+            <path d="M120 320c0-70 40-120 90-120s90 50 90 120" fill="none" stroke="#9B8CFF" stroke-width="8" stroke-linecap="round"/>
+            <rect x="150" y="250" width="120" height="80" rx="16" fill="#3A3080"/>
+            <circle cx="210" cy="230" r="46" fill="#FFE08A"/>
+            <circle cx="196" cy="220" r="5" fill="#241B3A"/>
+            <circle cx="224" cy="220" r="5" fill="#241B3A"/>
+            <path d="M196 244q14 12 28 0" stroke="#241B3A" stroke-width="4" fill="none" stroke-linecap="round"/>
+            <path d="M60 300q30-40 60 0" stroke="#33C2E0" stroke-width="6" fill="none" stroke-linecap="round"/>
+            <path d="M300 300q30-40 60 0" stroke="#FF7597" stroke-width="6" fill="none" stroke-linecap="round"/>
+          </svg>
+        </div>
       </div>
     </div>
   </section>
@@ -104,20 +98,20 @@
     <div class="wrap">
       <div class="section-head">
         <span class="tag" data-i18n="about.tag">Біз туралы</span>
-        <h2 data-i18n="about.title">«Ақзере» балабақшасы</h2>
-        <p data-i18n="about.lead">Біз әр баланың сенімді, қызығушылығы мол және бақытты болып өсуіне ыңғайлы, қауіпсіз әрі дамытушы орта жасаймыз.</p>
+        <h2 data-i18n="about.title">«Ақзере 2» балабақшасы</h2>
+        <p data-i18n="about.lead">Әр баланың өз қарқыны бар. Біздің міндетіміз — сол қарқынды бұзбай, қызығушылығын қолдап, күн сайын сеніммен алға қадам бастыру.</p>
       </div>
       <div class="about-grid">
         <div>
-          <p data-i18n="about.p1">«Ақзере» — Алматы қаласының Наурызбай ауданында, Жуалы көшесі 79 мекенжайында орналасқан жеке балабақша. Ұжымымыз тәжірибелі тәрбиешілерден, қосымша даму пәндерінің мұғалімдерінен және медицина қызметкерлерінен тұрады, олар тәрбиеленушілердің денсаулығына, қауіпсіздігіне және жан-жақты дамуына күнделікті қамқорлық жасайды.</p>
-          <p data-i18n="about.p2">Жұмысымызды құрылымдалған сабақтар мен еркін ойынның тепе-теңдігіне негіздейміз: балалар қазақ, орыс және ағылшын тілдерін үйренеді, математика мен логика негіздерімен танысады, шығармашылықпен, музыкамен және дене шынықтырумен айналысады — жас ерекшелігіне сай, ыңғайлы қарқында.</p>
-          <p data-i18n="about.p3">Біздің мақсатымыз — балаға жай ғана қарау емес, оның одан әрі білім алуы мен дербестігі үшін берік негіз қалыптастыру.</p>
+          <p data-i18n="about.p1">«Ақзере» — Алматы қаласының Наурызбай ауданында, Жуалы көшесі 79 мекенжайында орналасқан жеке балабақша. Тәрбиешілер, қосымша даму мұғалімдері және медицина қызметкері бір команда болып, әр баланың денсаулығы мен қауіпсіздігін күн сайын қадағалайды.</p>
+          <p data-i18n="about.p2">Күн тәртібін ойын мен сабақтың тепе-теңдігіне құрамыз: балалар қазақ, орыс және ағылшын тілдерінде сөйлеуді үйренеді, санау мен ойлауды дамытады, ән салады, сурет салады және дене қимылымен айналысады — барлығы жас ерекшелігіне лайықталған қарқында.</p>
+          <p data-i18n="about.p3">Бізге маңызды нәрсе — баланы жай ғана күту емес, оның мектепке дейінгі жылдарын қызықты да мағыналы етіп, келешегіне берік негіз қалау.</p>
         </div>
         <div class="fact-card">
-          <h3 data-i18n="about.factTitle">Балабақша туралы қысқаша</h3>
+          <h3 data-i18n="about.factTitle">Балабақша жайлы қысқаша</h3>
           <ul class="fact-list">
             <li><span class="k" data-i18n="about.fact1k">Қала</span><span class="v">Алматы</span></li>
-            <li><span class="k" data-i18n="about.fact2k">Мекенжайы</span><span class="v" data-i18n="about.fact2v">Наурызбай ауданы, ул. Жуалы 79</span></li>
+            <li><span class="k" data-i18n="about.fact2k">Мекенжайы</span><span class="v" data-i18n="about.fact2v">Наурызбай ауданы, Жуалы көшесі 79</span></li>
             <li><span class="k" data-i18n="about.fact3k">Тәрбиеленушілер жасы</span><span class="v">2–5</span></li>
             <li><span class="k" data-i18n="about.fact4k">Жұмыс күндері</span><span class="v" data-i18n="about.fact4v">Дс–Жм</span></li>
             <li><span class="k" data-i18n="about.fact5k">Оқыту тілдері</span><span class="v" data-i18n="about.fact5v">ҚАЗ / РУС</span></li>
@@ -126,90 +120,83 @@
       </div>
     </div>
   </section>
-
+        
   <!-- ===== PHOTO GALLERY ===== -->
   <section id="photos">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="tag" data-i18n="photos.tag">Галерея</span>
-        <h2 data-i18n="photos.title">Біздің балабақшадағы күндер</h2>
-        <p data-i18n="photos.lead">Топтарымыз, ойын аймақтары, тамақтану және балалардың күнделікті өмірінен фотосуреттер.</p>
-      </div>
-      <div class="photo-gallery">
-        <button type="button" class="ph" data-full="images/gallery/1.jpg" aria-label="Фото 1"><img src="images/gallery/1.jpg" alt="«Ақзере» балабақшасы — фото 1" loading="lazy"></button>
-        <button type="button" class="ph" data-full="images/gallery/2.jpg" aria-label="Фото 2"><img src="images/gallery/2.jpg" alt="«Ақзере» балабақшасы — фото 2" loading="lazy"></button>
-        <button type="button" class="ph" data-full="images/gallery/3.jpg" aria-label="Фото 3"><img src="images/gallery/3.jpg" alt="«Ақзере» балабақшасы — фото 3" loading="lazy"></button>
-        <button type="button" class="ph" data-full="images/gallery/4.jpg" aria-label="Фото 4"><img src="images/gallery/4.jpg" alt="«Ақзере» балабақшасы — фото 4" loading="lazy"></button>
-        <button type="button" class="ph" data-full="images/gallery/5.jpg" aria-label="Фото 5"><img src="images/gallery/5.jpg" alt="«Ақзере» балабақшасы — фото 5" loading="lazy"></button>
-        <button type="button" class="ph" data-full="images/gallery/6.jpg" aria-label="Фото 6"><img src="images/gallery/6.jpg" alt="«Ақзере» балабақшасы — фото 6" loading="lazy"></button>
-        <button type="button" class="ph" data-full="images/gallery/7.jpg" aria-label="Фото 7"><img src="images/gallery/7.jpg" alt="«Ақзере» балабақшасы — фото 7" loading="lazy"></button>
-        <button type="button" class="ph" data-full="images/gallery/8.jpg" aria-label="Фото 8"><img src="images/gallery/8.jpg" alt="«Ақзере» балабақшасы — фото 8" loading="lazy"></button>
-      </div>
-    </div>
+   <div class="wrap">
+     <div class="section-head">
+       <span class="tag" data-i18n="photos.tag">Галерея</span>
+       <h2 data-i18n="photos.title">Біздің балабақшадағы күндер</h2>
+       <p data-i18n="photos.lead">Топтарымыз, ойын аймақтары, тамақтану және балалардың күнделікті өмірінен фотосуреттер.</p>
+     </div>
+     <div class="photo-gallery">
+       <button type="button" class="ph" data-full="images/gallery/1.jpg" aria-label="Фото 1"><img src="images/gallery/1.jpg" alt="Фото 1" loading="lazy"></button>
+        <button type="button" class="ph" data-full="images/gallery/2.jpg" aria-label="Фото 2"><img src="images/gallery/2.jpg" alt="Фото 2" loading="lazy"></button>
+        <button type="button" class="ph" data-full="images/gallery/3.jpg" aria-label="Фото 3"><img src="images/gallery/3.jpg" alt="Фото 3" loading="lazy"></button>
+       <button type="button" class="ph" data-full="images/gallery/4.jpg" aria-label="Фото 4"><img src="images/gallery/4.jpg" alt="Фото 4" loading="lazy"></button>
+       <button type="button" class="ph" data-full="images/gallery/5.jpg" aria-label="Фото 5"><img src="images/gallery/5.jpg" alt="Фото 5" loading="lazy"></button>
+        <button type="button" class="ph" data-full="images/gallery/6.jpg" aria-label="Фото 6"><img src="images/gallery/6.jpg" alt="Фото 6" loading="lazy"></button>
+        <button type="button" class="ph" data-full="images/gallery/7.jpg" aria-label="Фото 7"><img src="images/gallery/7.jpg" alt="Фото 7" loading="lazy"></button>
+       <button type="button" class="ph" data-full="images/gallery/8.jpg" aria-label="Фото 8"><img src="images/gallery/8.jpg" alt="Фото 8" loading="lazy"></button>
+     </div>
+   </div>
   </section>
 
-  <div class="lb" id="lb" aria-hidden="true">
-    <button type="button" class="x" aria-label="Жабу">&times;</button>
-    <button type="button" class="p" aria-label="Алдыңғы">&#8249;</button>
-    <img alt="">
-    <button type="button" class="n" aria-label="Келесі">&#8250;</button>
-  </div>
-
   <!-- ===== ADVANTAGES ===== -->
-  <section id="advantages" class="alt">
+  <section id="advantages">
     <div class="wrap">
       <div class="section-head">
         <span class="tag" data-i18n="adv.tag">Артықшылықтарымыз</span>
-        <h2 data-i18n="adv.title">Ата-аналар неге «Ақзере» бақшасын таңдайды</h2>
+        <h2 data-i18n="adv.title">Ата-аналар «Ақзере 2ге» неге сенім артады</h2>
       </div>
       <div class="adv-grid">
         <div class="adv-card">
           <div class="icon-wrap">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v6c0 5-3 8.5-7 9-4-.5-7-4-7-9V6l7-3Z" stroke="#2E7A57" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v6c0 5-3 8.5-7 9-4-.5-7-4-7-9V6l7-3Z" stroke="#6C5CE7" stroke-width="1.8" stroke-linejoin="round"/></svg>
           </div>
-          <h3 data-i18n="adv.c1t">Қауіпсіз орта</h3>
-          <p data-i18n="adv.c1p">Қоршалған аумақ, тәулік бойы бейнебақылау және балалардың денсаулығын қадағалайтын медициналық кабинет.</p>
+          <h3 data-i18n="adv.c1t">Қауіпсіз кеңістік</h3>
+          <p data-i18n="adv.c1p">Қоршалған аумақ, тәулік бойы бейнебақылау және баланың денсаулығын қадағалайтын медициналық кабинет.</p>
         </div>
         <div class="adv-card">
           <div class="icon-wrap">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4 6l8-3 8 3-8 3-8-3Z" stroke="#F0A93A" stroke-width="1.8" stroke-linejoin="round"/><path d="M6 9v6c0 2 3 3 6 3s6-1 6-3V9" stroke="#F0A93A" stroke-width="1.8"/></svg>
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.5-9.5-9C1 8 3 4 7 4c2 0 4 1.5 5 3 1-1.5 3-3 5-3 4 0 6 4 4.5 8-2.5 4.5-9.5 9-9.5 9Z" stroke="#FF7597" stroke-width="1.8" stroke-linejoin="round"/></svg>
           </div>
-          <h3 data-i18n="adv.c2t">Қамқор тәрбие</h3>
-          <p data-i18n="adv.c2p">Әр балаға жеке көзқарас және кәсіби біліктілігі жоғары тәжірибелі тәрбиешілер ұжымы.</p>
+          <h3 data-i18n="adv.c2t">Жүрекпен тәрбие</h3>
+          <p data-i18n="adv.c2p">Әр балаға жеке көзқарас және білікті, тәжірибелі тәрбиешілер ұжымы.</p>
         </div>
         <div class="adv-card">
           <div class="icon-wrap">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 2v20M4 8l8-6 8 6M4 8v9l8 5 8-5V8" stroke="#E97662" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 2v6M12 16v6M4.9 4.9l4.2 4.2M14.9 14.9l4.2 4.2M2 12h6M16 12h6M4.9 19.1l4.2-4.2M14.9 9.1l4.2-4.2" stroke="#FFC94A" stroke-width="1.8" stroke-linecap="round"/></svg>
           </div>
-          <h3 data-i18n="adv.c3t">Белсенді даму</h3>
-          <p data-i18n="adv.c3p">Тіл үйрену, шығармашылық, музыка және логика сабақтары — бағдарлама әр топтың жас ерекшелігіне бейімделген.</p>
+          <h3 data-i18n="adv.c3t">Ашылу мен даму</h3>
+          <p data-i18n="adv.c3p">Тіл үйрену, шығармашылық, музыка және логика сабақтары — топтың жас ерекшелігіне бейімделген бағдарлама бойынша.</p>
         </div>
         <div class="adv-card">
           <div class="icon-wrap">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#5A9FC4" stroke-width="1.8"/><path d="M12 7v5l4 2" stroke="#5A9FC4" stroke-width="1.8" stroke-linecap="round"/></svg>
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#33C2E0" stroke-width="1.8"/><path d="M12 7v5l4 2" stroke="#33C2E0" stroke-width="1.8" stroke-linecap="round"/></svg>
           </div>
-          <h3 data-i18n="adv.c4t">Ойын алаңдары</h3>
-          <p data-i18n="adv.c4p">Әр жас тобына арналған серуендеу және ашық ауада белсенді ойнау аймақтары.</p>
+          <h3 data-i18n="adv.c4t">Ойын әлемі</h3>
+          <p data-i18n="adv.c4p">Әр жас тобына арналған, ашық ауада серуендеу мен белсенді ойынға арналған аймақтар.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ===== GALLERY ===== -->
-  <section id="gallery">
+  <section id="gallery" class="alt">
     <div class="wrap">
       <div class="section-head">
-        <span class="tag" data-i18n="gal.tag">Балабақша өмірі</span>
-        <h2 data-i18n="gal.title">Тәрбиеленушілеріміз немен айналысады</h2>
-        <p data-i18n="gal.lead">Топтар мен іс-шаралардың фотосуреттері сайт толықтырылған сайын осында қосылады. Әзірге — бақшамыздың негізгі бағыттары.</p>
+        <span class="tag" data-i18n="gal.tag">Балабақша күндері</span>
+        <h2 data-i18n="gal.title">Тәрбиеленушілеріміздің күні қалай өтеді</h2>
+        <p data-i18n="gal.lead">Топтар мен іс-шаралардың суреттері сайт толықтырылған сайын осында қосылады. Әзірге — бақшамыздың негізгі бағыттары.</p>
       </div>
       <div class="gal-grid">
-        <div class="gal-card g1"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.5 6.5L21 9l-5 4.5L17.5 21 12 17l-5.5 4L8 13.5 3 9l6.5-.5L12 2Z" fill="#fff" opacity="0.9"/></svg><h4 data-i18n="gal.g1t">Шығармашылық</h4><span data-i18n="gal.g1d">Сурет салу, мүсіндеу, аппликация</span></div>
-        <div class="gal-card g2"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" fill="#fff" opacity="0.9"/></svg><h4 data-i18n="gal.g2t">Музыка және ырғақ</h4><span data-i18n="gal.g2d">Ән, би, музыкалық аспаптар</span></div>
-        <div class="gal-card g3"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M4 18l6-10 4 6 3-4 3 8H4Z" fill="#fff" opacity="0.9"/></svg><h4 data-i18n="gal.g3t">Табиғатта серуендеу</h4><span data-i18n="gal.g3d">Ойын алаңдары, экскурсиялар</span></div>
-        <div class="gal-card g4"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="3" fill="#fff" opacity="0.9"/></svg><h4 data-i18n="gal.g4t">Логика және санау</h4><span data-i18n="gal.g4d">Дамытушы ойындар мен тапсырмалар</span></div>
-        <div class="gal-card g5"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.5-9.5-9C1 8 3 4 7 4c2 0 4 1.5 5 3 1-1.5 3-3 5-3 4 0 6 4 4.5 8-2.5 4.5-9.5 9-9.5 9Z" fill="#fff" opacity="0.9"/></svg><h4 data-i18n="gal.g5t">Қамқорлық және денсаулық</h4><span data-i18n="gal.g5d">Медициналық бақылау, күн тәртібі</span></div>
-        <div class="gal-card g6"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M3 12h4l3-8 4 16 3-8h4" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><h4 data-i18n="gal.g6t">Тілдік даму</h4><span data-i18n="gal.g6d">Қазақша, орысша, ағылшынша</span></div>
+        <div class="gal-card g1"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.5 6.5L21 9l-5 4.5L17.5 21 12 17l-5.5 4L8 13.5 3 9l6.5-.5L12 2Z" fill="#fff" opacity="0.9"/></svg><h4 data-i18n="gal.g1t">Шығармашылық сағат</h4><span data-i18n="gal.g1d">Сурет салу, мүсіндеу, аппликация</span></div>
+        <div class="gal-card g2"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" fill="#fff" opacity="0.9"/></svg><h4 data-i18n="gal.g2t">Ырғақ пен ән</h4><span data-i18n="gal.g2d">Ән, би, музыкалық аспаптар</span></div>
+        <div class="gal-card g3"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M4 18l6-10 4 6 3-4 3 8H4Z" fill="#fff" opacity="0.9"/></svg><h4 data-i18n="gal.g3t">Ашық аспан астында</h4><span data-i18n="gal.g3d">Ойын алаңдары, серуен, экскурсиялар</span></div>
+        <div class="gal-card g4"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="3" fill="#fff" opacity="0.9"/></svg><h4 data-i18n="gal.g4t">Ойлау мен санау</h4><span data-i18n="gal.g4d">Дамытушы ойындар мен тапсырмалар</span></div>
+        <div class="gal-card g5"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.5-9.5-9C1 8 3 4 7 4c2 0 4 1.5 5 3 1-1.5 3-3 5-3 4 0 6 4 4.5 8-2.5 4.5-9.5 9-9.5 9Z" fill="#fff" opacity="0.9"/></svg><h4 data-i18n="gal.g5t">Қамқорлық пен денсаулық</h4><span data-i18n="gal.g5d">Медициналық бақылау, күн тәртібі</span></div>
+        <div class="gal-card g6"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M3 12h4l3-8 4 16 3-8h4" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><h4 data-i18n="gal.g6t">Үш тілде сөйлеу</h4><span data-i18n="gal.g6d">Қазақша, орысша, ағылшынша</span></div>
       </div>
     </div>
   </section>
@@ -228,7 +215,7 @@
             <div class="ic">📍</div>
             <div>
               <div class="label" data-i18n="contact.addrLabel">Мекенжай</div>
-              <div class="txt" data-i18n="contact.addrValue">г. Алматы, Наурызбайский р/н, ул. Жуалы 79</div>
+              <div class="txt" data-i18n="contact.addrValue">г. Алматы, Наурызбайский р/н, ул. Жунисова, 133/341</div>
             </div>
           </div>
           <div class="contact-row">
@@ -258,14 +245,14 @@
           <iframe
             class="map-frame"
             title="Map"
-            src="https://www.openstreetmap.org/export/embed.html?bbox=76.7850%2C43.2230%2C76.8000%2C43.2340&amp;layer=mapnik&amp;marker=43.228782%2C76.792841"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=76.7928%2C43.2169%2C76.8000%2C43.2340&amp;layer=mapnik&amp;marker=43.216995%2C76.792808"
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade">
           </iframe>
           <div class="map-links">
             <a href="https://www.google.com/maps/search/?api=1&amp;query=Алматы+Наурызбайский+район+улица+Жуалы+79" target="_blank" rel="noopener">Google Maps</a>
-            <a href="https://yandex.ru/maps/?text=Алматы%20Наурызбайский%20район%20улица%20Жуалы%2079" target="_blank" rel="noopener">Яндекс Карты</a>
-            <a href="https://2gis.kz/almaty/search/Алматы%20Наурызбайский%20район%20улица%20Жуалы%2079" target="_blank" rel="noopener">2ГИС</a>
+            <a href="https://www.google.com/maps/place/%D0%96%D0%B0%D0%B9%D0%BB%D0%B0%D1%83+133%2F341,+%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B/@43.2167816,76.7920135,19.25z/data=!4m14!1m7!3m6!1s0x38834256c2f35419:0x4b927446d83a4026!2zMzQxLCDQltGD0L3QuNGB0L7QstCwINGD0LsuIDEzMywg0JDQu9C80LDRgtGL!3b1!8m2!3d43.217844!4d76.787623!3m5!1s0x388342583599af23:0xabd86bd4e8baf4c5!8m2!3d43.2170083!4d76.7927702!16s%2Fg%2F11kxh3srxq?entry=ttu&g_ep=EgoyMDI2MDkyMy4wIKXMDSoASAFQAw%3D%3D">Яндекс Карты</a>
+            <a href="https://2gis.kz/almaty/firm/70000001084067395/76.79268%2C43.21703?m=76.79357%2C43.216865%2F19.46" target="_blank" rel="noopener">2ГИС</a>
           </div>
         </div>
 
@@ -273,25 +260,29 @@
     </div>
   </section>
 
+  <!-- Контейнер лайтбокса -->
+  <div class="lb" id="lb" aria-hidden="true">
+    <button type="button" class="x" aria-label="Жабу">&times;</button>
+    <button type="button" class="p" aria-label="Алдыңғы">&#8249;</button>
+    <img alt="">
+    <button type="button" class="n" aria-label="Келесі">&#8250;</button>
+  </div>
+
 </main>
 
 <footer>
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <h4>Ақзере</h4>
+        <h4>Ақзере 2</h4>
         <p data-i18n="footer.about">Алматы қаласы, Наурызбай ауданы, Жуалы көшесі 79 мекенжайындағы жеке балабақша. Күн сайынғы қамқорлық, қауіпсіздік және даму.</p>
-        
-        <!-- Блок социальных сетей с SVG-иконками -->
+
         <div class="social-links">
-          <!-- Instagram -->
           <a href="https://www.instagram.com/akzere_balabaqsha" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram">
             <svg viewBox="0 0 24 24">
               <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
             </svg>
           </a>
-
-          <!-- TikTok -->
           <a href="https://www.tiktok.com/@user7842803865869" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="TikTok">
             <svg viewBox="0 0 24 24">
               <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.82.56-1.36 1.49-1.41 2.49-.1 1.39.73 2.72 2.02 3.17 1.23.45 2.68.12 3.58-.8.64-.66.97-1.57.97-2.49.02-4.14.01-8.28.01-12.42z"/>
@@ -304,7 +295,7 @@
         <h4 data-i18n="footer.sections">Бөлімдер</h4>
         <ul>
           <li><a href="index.html#about" data-i18n="nav.about">Біз туралы</a></li>
-          <li><a href="index.html#photos" data-i18n="nav.gallery">Галерея</a></li>
+          <li><a href="index.html#advantages" data-i18n="nav.advantages">Артықшылықтарымыз</a></li>
           <li><a href="documents.html" data-i18n="nav.documents">Құжаттар</a></li>
         </ul>
       </div>
@@ -312,7 +303,7 @@
       <div>
         <h4 data-i18n="footer.contacts">Байланыс</h4>
         <ul>
-          <li data-i18n="topbar.city">г. Алматы, Наурызбайский р/н, ул. Жуалы 79</li>
+          <li data-i18n="topbar.city">г. Алматы, Наурызбайский р/н, ул. Жунисова, 133/341</li>
           <li><a href="tel:+77083778969">+7 708 377 89 69</a></li>
           <li><a href="mailto:info@akzere.edu.kz">info@akzere.edu.kz</a></li>
         </ul>
@@ -320,7 +311,7 @@
     </div>
 
     <div class="foot-bottom">
-      <span data-i18n="footer.copy">© 2026 «Ақзере» балабақшасы. Барлық құқықтар қорғалған.</span>
+      <span data-i18n="footer.copy">© 2026 «Ақзере 2» балабақшасы. Барлық құқықтар қорғалған.</span>
     </div>
   </div>
 </footer>

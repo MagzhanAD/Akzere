@@ -7,8 +7,81 @@
 <meta name="description" content="«Ақзере» балабақшасының ресми құжаттары">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<style>
+  .docs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+    margin-top: 32px;
+  }
+  .doc-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 16px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .doc-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(31, 90, 63, 0.08);
+  }
+  .doc-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+  }
+  .doc-badge {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    color: #fff;
+    flex: none;
+    text-transform: uppercase;
+  }
+  .badge-pdf { background: #E97662; }
+  .badge-jpeg { background: #5A9FC4; }
+  .badge-docx { background: #2E7A57; }
+
+  .doc-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin: 0;
+    line-height: 1.4;
+  }
+  .doc-download {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 10px 16px;
+    border-radius: 999px;
+    background: var(--surface-tint);
+    color: var(--primary-dark);
+    font-size: 14px;
+    font-weight: 700;
+    border: 1px solid var(--line);
+    text-decoration: none;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+  .doc-download:hover {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+  }
+</style>
 </head>
 <body>
 
@@ -17,10 +90,9 @@
     <a href="index.html" class="brand-row">
       <svg class="emblem" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="24" cy="24" r="23" fill="var(--surface)" stroke="var(--primary)" stroke-width="2"/>
-        <path d="M27 13a11 11 0 1 0 8 15.8A9 9 0 0 1 27 13Z" fill="var(--primary)"/>
-        <circle cx="16" cy="16" r="2" fill="var(--gold)"/>
-        <circle cx="34" cy="20" r="1.6" fill="var(--pink)"/>
-        <circle cx="14" cy="30" r="1.6" fill="var(--teal)"/>
+        <path d="M24 12c2 3 6 4 6 9 0 4-3 7-6 7s-6-3-6-7c0-5 4-6 6-9Z" fill="var(--primary)"/>
+        <circle cx="16" cy="30" r="4" fill="var(--amber)"/>
+        <circle cx="32" cy="30" r="4" fill="var(--coral)"/>
       </svg>
       <span class="name brand">Ақзере<small data-i18n="brand.tagline">жеке балабақша</small></span>
     </a>
@@ -50,7 +122,7 @@
       <div class="section-head">
         <span class="tag" data-i18n="docs.tag">Ресми ақпарат</span>
         <h2 data-i18n="docs.title">Балабақша құжаттары</h2>
-        <p data-i18n="docs.lead">Осы бөлімде балабақшаның барлық ресми құжаттарымен, лицензиялары мен сертификаттарымен танысып, жүктеп ала аласыз.</p>
+        <p data-i18n="docs.lead">Осы бөлімде балабақшаның барлық ресми құжаттары, лицензиялары мен сертификаттарымен танысып, жүктеп ала аласыз.</p>
       </div>
 
       <div class="docs-grid">
@@ -211,6 +283,1339 @@
           </a>
         </div>
 
+        <!-- 14. Воспитатели детского сада -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-pdf">PDF</div>
+            <h3 class="doc-title" data-i18n="doc.teachers">Воспитатели детского сада</h3>
+          </div>
+          <a href="documents/Тәрбиешілер.pdf" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 15. Сигнализация -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-pdf">PDF</div>
+            <h3 class="doc-title" data-i18n="doc.alarm">Сигнализация</h3>
+          </div>
+          <a href="documents/Сигнализация.pdf" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+                <!-- 19 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f01">«Ақзере» балабақшасы мектепке дейінгі ұйымы меңгерушісі қызметінің</h3>
+          </div>
+          <a href="documents/«Ақзере» балабақшасы мектепке дейінгі ұйымы меңгерушісі қызметінің.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 20 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f02">«Ақзере» МДҰ-да тамақтандыруды ұйымдастыруды бақылау бойынша</h3>
+          </div>
+          <a href="documents/«Ақзере» МДҰ-да тамақтандыруды ұйымдастыруды бақылау бойынша .docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 21 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f03">Педагог лауазымдарының үлгілік біліктілік сипаттамалары</h3>
+          </div>
+          <a href="documents/17_Педагог_лауазымдарының_үлгілік_біліктілік_сипаттамалары.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 22 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f04">2025 - 2026. Ер топ. Жеке даму Ақзере</h3>
+          </div>
+          <a href="documents/2025 - 2026. Ер топ. Жеке даму Ақзере.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 23 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f05">2025 - 2026. МАД. Жеке даму Ақзере</h3>
+          </div>
+          <a href="documents/2025 - 2026. МАД. Жеке даму Ақзере.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 24 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f06">2025 - 2026. Орт топ. Жеке даму картасы Ақзере</h3>
+          </div>
+          <a href="documents/2025 - 2026. Орт топ. Жеке даму картасы Ақзере.doc" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 25 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f07">2025-2026 оқу жылы желтоқсан айына арналған әдіскердің жұмыс жоспары</h3>
+          </div>
+          <a href="documents/2025-2026 оқу жылы желтоқсан айына арналған әдіскердің жұмыс жоспары .doc" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 26 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f08">2025–2026 оқу жылының қорытынды есебі</h3>
+          </div>
+          <a href="documents/2025–2026_оқу_жылының_қорытынды_есебі.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 27 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-ppt">PPT</div>
+            <h3 class="doc-title" data-i18n="doc.f09">Білім – келешегі. Адал азамат қаесібі маман</h3>
+          </div>
+          <a href="documents/BILIM-KELESHEGI-ADAL-AZAMAT-KAESIBI-MAMAN.pptx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 28 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f10">№5 әдістемелік кеңес</h3>
+          </div>
+          <a href="documents/№5 әдістемелік кеңес.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 29 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-pdf">PDF</div>
+            <h3 class="doc-title" data-i18n="doc.f11">Адалдық әліппесі</h3>
+          </div>
+          <a href="documents/Адалдық әліппесі.pdf" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 30 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f12">Ата-аналар жиналысы №3</h3>
+          </div>
+          <a href="documents/Ата-аналар жиналысы №3.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 31 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f13">Бестемше бойынша есеп</h3>
+          </div>
+          <a href="documents/Бестемше бойынша есеп.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 32 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f14">Денсаулық іс шаралары</h3>
+          </div>
+          <a href="documents/денсаулық іс шаралары.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 33 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-pdf">PDF</div>
+            <h3 class="doc-title" data-i18n="doc.f15">Договор</h3>
+          </div>
+          <a href="documents/Договор м.pdf" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 34 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f16">Ересек желтоқсан перспектива</h3>
+          </div>
+          <a href="documents/ересек желтоқсан перспектива.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 35 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f17">Ересек топ қаңтар перспектива 2026</h3>
+          </div>
+          <a href="documents/ересек топ қаңтар перспектива 2026.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 36 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f18">Ересек топ маусым 2026</h3>
+          </div>
+          <a href="documents/ересек топ маусым 2026.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 37 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f19">Ересек топ перспектива ақпан 2026</h3>
+          </div>
+          <a href="documents/ересек топ перспектива ақпан 2026.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 38 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f20">Ересек топ перспектива жаз 2026</h3>
+          </div>
+          <a href="documents/ересек топ перспектива жаз 2026.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 39 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f21">Ересек топ перспектива қазан</h3>
+          </div>
+          <a href="documents/ересек топ перспектива қазан.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 40 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f22">Ересек топ перспектива қараша</h3>
+          </div>
+          <a href="documents/ересек топ перспектива қараша.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 41 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f23">Ересек топ перспектива қыркүйек</h3>
+          </div>
+          <a href="documents/ересек топ перспектива қыркүйек.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 42 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f24">Ересек топ перспектива мамыр 2026</h3>
+          </div>
+          <a href="documents/Ересек топ перспектива мамыр 2026.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 43 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f25">Ересек топ перспектива наурыз 2026</h3>
+          </div>
+          <a href="documents/Ересек топ перспектива наурыз 2026.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 44 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f26">Ересек топ перспектива сәуір 2026</h3>
+          </div>
+          <a href="documents/Ересек топ перспектива сәуір 2026.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 45 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f27">Ересек топ циклограмма ақпан 2026</h3>
+          </div>
+          <a href="documents/ересек топ циклограмма ақпан 2026.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 46 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f28">Ересек топ циклограмма қазан</h3>
+          </div>
+          <a href="documents/ересек топ циклограмма қазан.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 47 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f29">Ересек топ циклограмма қаңтар 2026</h3>
+          </div>
+          <a href="documents/ересек топ циклограмма қаңтар 2026.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 48 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f30">Ересек топ циклограмма қараша</h3>
+          </div>
+          <a href="documents/ересек топ циклограмма қараша.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 49 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f31">Ересек топ циклограмма қыркүйек</h3>
+          </div>
+          <a href="documents/ересек топ циклограмма қыркүйек.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 50 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f32">Ересек топ циклограмма мамыр 2026</h3>
+          </div>
+          <a href="documents/ересек топ циклограмма мамыр 2026.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 51 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f33">Ересек топ циклограмма наурыз 2026</h3>
+          </div>
+          <a href="documents/ересек топ циклограмма наурыз 2026.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 52 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f34">Ересек топ циклограмма сәуір 2026</h3>
+          </div>
+          <a href="documents/Ересек топ циклограмма сәуір 2026.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 53 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f35">Ересек топ циклограмма қыркүйек (3)</h3>
+          </div>
+          <a href="documents/ересек_топ_циклограмма_қыркүйек_3.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 54 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f36">Әдіскер циклограммасы мамыр 2026</h3>
+          </div>
+          <a href="documents/әдіскер циклограммасы мамыр 2026.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 55 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f37">Әдіскер циклограммасы сәуір 2026</h3>
+          </div>
+          <a href="documents/әдіскер циклограммасы сәуір 2026.doc" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 56 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f38">Әкімшілік жиналыс №4</h3>
+          </div>
+          <a href="documents/Әкімшілік жиналыс №4.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 57 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f39">Әкімшілік жиналыс №5</h3>
+          </div>
+          <a href="documents/Әкімшілік жиналыс №5.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 58 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f40">Жеке даму картасы. Алтынай балапан бағдарлама 2025 - 2026</h3>
+          </div>
+          <a href="documents/жеке даму карта толық нұсқа Алтынай балапан бағдарлама 2025 - 2026.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 59 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f41">Жеке даму картасы. Бәйтерек 2025 - 2026</h3>
+          </div>
+          <a href="documents/жеке даму карта толық нұсқа Бәйтерек 2025 - 2026.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 60 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f42">Жеке даму картасы кіші топ (25 бала)</h3>
+          </div>
+          <a href="documents/Жеке_даму_картасы_кіші_топ_25_бала_.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 61 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f43">Желтоқсан 4 жас картотека 2</h3>
+          </div>
+          <a href="documents/желтоқсан 4 жас картотека 2.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 62 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f44">Желтоқсан 4 жас 2</h3>
+          </div>
+          <a href="documents/желтоқсан 4 жас 2.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 63 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f45">Желтоқсан кіші топ</h3>
+          </div>
+          <a href="documents/желтоқсан кіші топ.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 64 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f46">Желтоқсан орта топ картотека</h3>
+          </div>
+          <a href="documents/Желтоқсан орта топ картотека .docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 65 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f47">Желтоқсан орта топ</h3>
+          </div>
+          <a href="documents/ЖЕЛТОҚСАН ОРТА ТОП.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 66 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-xls">XLS</div>
+            <h3 class="doc-title" data-i18n="doc.f48">Жиынтық Сәт-Береке 2026</h3>
+          </div>
+          <a href="documents/ЖИЫНТЫҚ СӘТ-БЕРЕКЕ 2026.xlsx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 67 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f49">Жылдық жоспар 2025-2026</h3>
+          </div>
+          <a href="documents/ЖЫЛДЫҚ ЖОСПАР 2025-2026.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 68 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f50">Кіші желтоқсан перспектива</h3>
+          </div>
+          <a href="documents/кіші желтоқсан перспектива.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 69 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f51">Кіші топ қаңтар перспектива 2026</h3>
+          </div>
+          <a href="documents/кіші топ қаңтар перспектива 2026.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 70 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f52">Кіші топ маусым 2026</h3>
+          </div>
+          <a href="documents/кіші топ маусым 2026.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 71 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f53">Кіші топ перспектива ақпан 2026</h3>
+          </div>
+          <a href="documents/кіші топ перспектива ақпан 2026.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 72 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f54">Кіші топ перспектива жаз 2026</h3>
+          </div>
+          <a href="documents/кіші топ перспектива жаз 2026.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 73 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f55">Кіші топ перспектива қазан</h3>
+          </div>
+          <a href="documents/кіші топ перспектива қазан.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 74 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f56">Кіші топ перспектива қараша</h3>
+          </div>
+          <a href="documents/кіші топ перспектива қараша.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 75 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f57">Кіші топ перспектива қыркүйек</h3>
+          </div>
+          <a href="documents/кіші топ перспектива қыркүйек.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 76 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f58">Кіші топ перспектива мамыр 2026</h3>
+          </div>
+          <a href="documents/Кіші топ перспектива мамыр 2026.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 77 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f59">Кіші топ перспектива наурыз 2026</h3>
+          </div>
+          <a href="documents/Кіші топ перспектива наурыз 2026.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 78 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f60">Кіші топ перспектива сәуір 2026</h3>
+          </div>
+          <a href="documents/Кіші топ перспектива сәуір 2026.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 79 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f61">Кіші топ перспектива</h3>
+          </div>
+          <a href="documents/кіші топ перспектива.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 80 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f62">Кіші топ циклограмма ақпан 2026</h3>
+          </div>
+          <a href="documents/кіші топ циклограмма ақпан 2026.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 81 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f63">Кіші топ циклограмма қазан</h3>
+          </div>
+          <a href="documents/кіші топ циклограмма қазан.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 82 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f64">Кіші топ циклограмма қаңтар 2026</h3>
+          </div>
+          <a href="documents/кіші топ циклограмма қаңтар 2026.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 83 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f65">Кіші топ циклограмма қараша</h3>
+          </div>
+          <a href="documents/кіші топ циклограмма қараша.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 84 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f66">Кіші топ циклограмма қыркүйек</h3>
+          </div>
+          <a href="documents/кіші топ циклограмма қыркүйек.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 85 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f67">Кіші топ циклограмма мамыр 2026</h3>
+          </div>
+          <a href="documents/кіші топ циклограмма мамыр 2026.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 86 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f68">Кіші топ циклограмма наурыз 2026</h3>
+          </div>
+          <a href="documents/кіші топ циклограмма наурыз 2026.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 87 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f69">Кіші топ циклограмма сәуір 2026</h3>
+          </div>
+          <a href="documents/кіші топ циклограмма сәуір 2026.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 88 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f70">МДҰ ішкі бақылаудың түрлері</h3>
+          </div>
+          <a href="documents/МДҰ ішкі бақылаудың түрлері.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 89 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f71">Мектепке дейінгі мекемелерде балалардың өмірі мен денсаулығын қорғау жөніндегі нұсқаулық</h3>
+          </div>
+          <a href="documents/Мектепке дейінгі мекемелерде балалардың өмірі мен денсаулығын қорғау жөніндегі нұсқаулық.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 90 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f72">Мектепке дейінгі ұйымда 2025 - 2026 оқу жылында бақылау қызметін ұйымдастыру туралы</h3>
+          </div>
+          <a href="documents/Мектепке дейінгі ұйымда в 2025 - 2026 оқу жылында бақылау қызметін ұйымдастыру туралы.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 91 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f73">Мектепке дейінгі ұйымдағы бақылау-талдау қызметі</h3>
+          </div>
+          <a href="documents/Мектепке дейінгі ұйымдағы бақылау-талдау қызметі .docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 92 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f74">Мектепке дейінгі ұйымдағы тәрбие мен оқыту процессін ұйымдастырудағы бақылау мен басшылық</h3>
+          </div>
+          <a href="documents/Мектепке дейінгі ұйымдағы тәрбие мен оқыту процессін ұйымдастырудағы бақылау мен басшылық.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 93 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f75">Мектепке дейінгі ұйымдарда және мектептердің мектепалды сыныптарында қауіпсіздікті қамтамасыз етуге бағытталған балалар әрекеті түрлерінің тақырыптық жоспары</h3>
+          </div>
+          <a href="documents/Мектепке дейінгі ұйымдарда және мектептердің мектепалды сыныптарында қауіпсіздікті қамтамасыз етуге бағытталған балалар әрекеті түрлерінің тақырыптық жоспары.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 94 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f76">Мектепке дейінгі ұйымның жедел бақылау қызметінің циклограммасы</h3>
+          </div>
+          <a href="documents/Мектепке дейінгі ұйымның жедел бақылау қызметінің циклограммасы.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 95 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-xls">XLS</div>
+            <h3 class="doc-title" data-i18n="doc.f77">Мониторинг қорытындысы 2026 Сәт-Береке</h3>
+          </div>
+          <a href="documents/МОНИТОРИНГ ҚОРЫТЫНДЫ 2026 СӘТ-БЕРЕКЕ.xlsx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 96 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-ppt">PPT</div>
+            <h3 class="doc-title" data-i18n="doc.f78">Нұсқаулық хат 25-26</h3>
+          </div>
+          <a href="documents/нұсқаулық хат 25-26.pptx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 97 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f79">Орта білім беру ұйымдарымен өзара іс-әрекет</h3>
+          </div>
+          <a href="documents/Орта білім беру ұйымдарымен өзара іс-әрекет.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 98 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f80">Орта перспектива желтоқсан</h3>
+          </div>
+          <a href="documents/орта перспектива желтоқсан.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 99 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f81">Ортаңғы топ қаңтар перспектива 2026</h3>
+          </div>
+          <a href="documents/ортаңғы топ қаңтар перспектива 2026.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 100 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f82">Ортаңғы топ маусым 2026</h3>
+          </div>
+          <a href="documents/ортаңғы топ маусым 2026.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 101 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f83">Ортаңғы топ перспектива ақпан 2026</h3>
+          </div>
+          <a href="documents/ортаңғы топ перспектива ақпан 2026.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 102 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f84">Ортаңғы топ перспектива жаз 2026</h3>
+          </div>
+          <a href="documents/ортаңғы топ перспектива жаз 2026.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 103 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f85">Ортаңғы топ перспектива қазан</h3>
+          </div>
+          <a href="documents/ортаңғы топ перспектива қазан.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 104 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f86">Ортаңғы топ перспектива қараша</h3>
+          </div>
+          <a href="documents/ортаңғы топ перспектива қараша.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 105 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f87">Ортаңғы топ перспектива қыркүйек</h3>
+          </div>
+          <a href="documents/ортаңғы топ перспектива қыркүйек.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 106 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f88">Ортаңғы топ перспектива мамыр 2026</h3>
+          </div>
+          <a href="documents/ортаңғы топ перспектива мамыр 2026.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 107 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f89">Ортаңғы топ перспектива наурыз 2026</h3>
+          </div>
+          <a href="documents/Ортаңғы топ перспектива наурыз 2026.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 108 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f90">Ортаңғы топ перспектива сәуір 2026</h3>
+          </div>
+          <a href="documents/Ортаңғы топ перспектива сәуір 2026.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 109 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f91">Ортаңғы топ циклограмма 2026</h3>
+          </div>
+          <a href="documents/ортаңғы топ циклограмма 2026.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 110 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f92">Ортаңғы топ циклограмма ақпан 2026</h3>
+          </div>
+          <a href="documents/ортаңғы топ циклограмма ақпан 2026.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 111 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f93">Ортаңғы топ циклограмма қазан</h3>
+          </div>
+          <a href="documents/ортаңғы топ циклограмма қазан.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 112 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f94">Ортаңғы топ циклограмма қаңтар 2026</h3>
+          </div>
+          <a href="documents/ортаңғы топ циклограмма қаңтар 2026.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 113 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f95">Ортаңғы топ циклограмма қараша</h3>
+          </div>
+          <a href="documents/ортаңғы топ циклограмма қараша.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 114 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f96">Ортаңғы топ циклограмма қыркүйек</h3>
+          </div>
+          <a href="documents/ортаңғы топ циклограмма қыркүйек.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 115 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f97">Ортаңғы топ циклограмма наурыз 2026</h3>
+          </div>
+          <a href="documents/ортаңғы топ циклограмма наурыз 2026.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 116 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f98">Ортаңғы топ циклограмма сәуір 2026</h3>
+          </div>
+          <a href="documents/ортаңғы топ циклограмма сәуір 2026.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 117 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f99">Ортаңғы топ перспектива қыркүйек (2)</h3>
+          </div>
+          <a href="documents/ортаңғы_топ_перспектива_қыркүйек_2.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 118 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f100">Ортаңғы топ циклограмма қыркүйек (2)</h3>
+          </div>
+          <a href="documents/ортаңғы_топ_циклограмма_қыркүйек_2.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 119 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f101">Педагогикалық кеңес хаттамасы №5</h3>
+          </div>
+          <a href="documents/Педагогикалык_кеңес_хаттамасы_№5.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 120 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-xls">XLS</div>
+            <h3 class="doc-title" data-i18n="doc.f102">Сәт-Береке аралық мониторинг</h3>
+          </div>
+          <a href="documents/Сәт-Береке _Аралық_мониторинг.xlsx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 121 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f103">Тамыз ересек 2</h3>
+          </div>
+          <a href="documents/тамыз ересек 2.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 122 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f104">Тамыз орта</h3>
+          </div>
+          <a href="documents/тамыз орта дурыс.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 123 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-xls">XLS</div>
+            <h3 class="doc-title" data-i18n="doc.f105">ТОО Сәт-Береке. Қонжық балдырған аралық</h3>
+          </div>
+          <a href="documents/ТОО Сәт-Береке қонжық балдырған аралық.xlsx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 124 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-xls">XLS</div>
+            <h3 class="doc-title" data-i18n="doc.f106">ТОО Сәт-Береке. Құлыншақ аралық</h3>
+          </div>
+          <a href="documents/ТОО Сәт-Береке құлыншақ аралық.xlsx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 125 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f107">ҰІӘ кестесі 2025-2026</h3>
+          </div>
+          <a href="documents/ҰІӘ кестесі 2025-2026.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 126. Эвакуационный тренажер (ключ уже есть в словаре) -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.evacSimulator">Эвакуационный тренажер в случае пожара</h3>
+          </div>
+          <a href="documents/эвак.трен в случ.пожара .docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+        <!-- 127 -->
+        <div class="doc-card">
+          <div class="doc-info">
+            <div class="doc-badge badge-doc">DOC</div>
+            <h3 class="doc-title" data-i18n="doc.f108">Экологиялық іс-шаралар жоспары</h3>
+          </div>
+          <a href="documents/ЭКОЛОГИЯЛЫҚ ІС-ШАРАЛАР ЖОСПАРЫ.docx" target="_blank" rel="noopener noreferrer" download class="doc-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="docs.downloadBtn">Жүктеу</span>
+          </a>
+        </div>
+
+
       </div>
     </div>
   </section>
@@ -222,13 +1627,17 @@
       <div>
         <h4>Ақзере</h4>
         <p data-i18n="footer.about">Алматы қаласы, Наурызбай ауданы, Жуалы көшесі 79 мекенжайындағы жеке балабақша. Күн сайынғы қамқорлық, қауіпсіздік және даму.</p>
-
+        
+        <!-- Социальные сети со ссылками на ПРОФИЛИ -->
         <div class="social-links">
+          <!-- Ссылка на страницу Instagram -->
           <a href="https://www.instagram.com/akzere_balabaqsha" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram">
             <svg viewBox="0 0 24 24">
               <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
             </svg>
           </a>
+
+          <!-- Ссылка на страницу TikTok -->
           <a href="https://www.tiktok.com/@user7842803865869" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="TikTok">
             <svg viewBox="0 0 24 24">
               <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.82.56-1.36 1.49-1.41 2.49-.1 1.39.73 2.72 2.02 3.17 1.23.45 2.68.12 3.58-.8.64-.66.97-1.57.97-2.49.02-4.14.01-8.28.01-12.42z"/>
